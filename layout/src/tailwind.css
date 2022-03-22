@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	html {
+		font-family: Montserrat;
+	}
+	body > *{
+		max-width: 1024px;
+	}
+	h1 {
+		font-weight: 300;
+		font-size: 52px;
+		line-height: 64px;
+		letter-spacing: 0.2px;
+	}
+	h2 {
+		font-weight: 500;
+		font-size: 44px;
+		line-height: 54px;
+		letter-spacing: 0px;
+	}
+	h3 {
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 40px;
+		letter-spacing: 0.1px;
+	}
+	h4 {
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 32px;
+		letter-spacing: 0.2px;
+	}
+	h5 {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 26px;
+		letter-spacing: 0.2px;
+	}
+	h6 {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: 0.2px;
+	}
+	.subtitle {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.2px;
+	}
+	.subtitle-sm {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 0.2px;
+	}
+	.body {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.1px;
+	}
+	.body-sm {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 22px;
+		letter-spacing: 0.1px;
+	}
+	.small {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: 0.2px;
+	}
+	.button {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 0.2px;
+	}
+}

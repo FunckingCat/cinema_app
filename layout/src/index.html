@@ -4,12 +4,27 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./reset.css">
 	<link rel="stylesheet" href="./style.css">
-	<title>Document</title>
+	<title>Cinema App</title>
 </head>
-<body>
-	<h1 class="text-3xl font-bold underline text-blue-500">
-		Hello world! 
-	</h1>
+<body class="w-full min-w-[580px] flex flex-col items-center p-4">
+	<header class="w-full grid grid-cols-3 bg-gray-50 rounded-lg shadow-md p-2">
+		<div class="w-full flex flex-row items-center">
+			<img src="./static/logo.svg" alt="logo">
+			<h5 class="ml-2">Cinema App</h4>
+		</div>
+		<nav class="flex flex-row justify-around items-center">
+			<div class="body font-bold">Home</div>
+			<div class="body ">Buy ticket</div>
+			<div class="body ">Films</div>
+		</nav>
+		<div class="w-full flex items-center justify-center">
+			<button type="button" class="px-8 py-3 font-semibold rounded-md bg-gray-900 text-white">Sign In</button>
+		</div> 
+	</header>
 </body>
 </html>
