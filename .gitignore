@@ -8,6 +8,8 @@
 *.ear
 *.nar
 hs_err_pid*
+*.map
+mixin.css
 
 ##############################
 ## Maven

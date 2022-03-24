@@ -1,70 +1,4 @@
-$dark: #2B2B2B;
-$lgray: #8B8B8B;
-$prime: #25282B;
-$second: #52575C;
-$inactive: #A0A4A8;
-$default: #CACCCF;
-$devider: #E8E8E8;
-$bgcol: #F9F9FA;
-$error: #FB4E4E;
-$warning: #FB4E4E;
-$success: #2AC769;
-$primary: #993639;
-$primarydft: #FFBDBF;
-$secondary: #00857A;
-$secondarydft: #99DBD6;
-
-@mixin rec($width, $height) {
-	width: $width;
-	height: $height;
-}
-
-@mixin padding-y($size) {
-	padding-top: $size;
-	padding-bottom: $size;
-}
-
-@mixin padding-x($size) {
-	padding-left: $size;
-	padding-right: $size;
-}
-
-@mixin margin-y($size) {
-	margin-top: $size;
-	margin-bottom: $size;
-}
-
-@mixin margin-x($size) {
-	margin-left: $size;
-	margin-right: $size;
-}
-
-@mixin text-shorten {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-@mixin flex-row {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
-@mixin flex-col {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-}
-
-@mixin center {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
+@import "mixin";
 
 * {
 	color: $prime;
@@ -195,18 +129,21 @@ main {
 		input {
 			width: 100%;
 			padding: 0.3rem;
+			padding-left: 1rem;
 			border-radius: 0.5rem;
 			border: 1px solid $prime;
 		}
 	}
 
 	.hint {
+		background-color: #fff;
 		@include center();
 		@include margin-y(0.5rem);
 	}
 
 	.btn {
 		@include margin-y(0.5rem);
+		margin-top: 1.5rem;
 	}
 
 	.full-width {
@@ -226,20 +163,4 @@ main {
 
 .btn-active {
 	background-color: $primary;
-}
-
-html::-webkit-scrollbar {
-	width: 3px;
-	background-color: white;
-}
-
-html::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	background-color: $inactive;
-}
-
-html::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
-	background-color: white;
 }
