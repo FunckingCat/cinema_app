@@ -1,18 +1,18 @@
-$dark:			#2B2B2B;
-$lgray:			#8B8B8B;
-$prime:			#25282B;
-$second:		#52575C;
-$inactive:		#A0A4A8;
-$default:		#CACCCF;
-$devider:		#E8E8E8;
-$bgcol:			#F9F9FA;
-$error:			#FB4E4E;
-$warning:		#FB4E4E;
-$success:		#2AC769;
-$primary:		#993639;
-$primarydft:	#FFBDBF;
-$secondary:		#00857A;
-$secondarydft:	#99DBD6;
+$dark: #2B2B2B;
+$lgray: #8B8B8B;
+$prime: #25282B;
+$second: #52575C;
+$inactive: #A0A4A8;
+$default: #CACCCF;
+$devider: #E8E8E8;
+$bgcol: #F9F9FA;
+$error: #FB4E4E;
+$warning: #FB4E4E;
+$success: #2AC769;
+$primary: #993639;
+$primarydft: #FFBDBF;
+$secondary: #00857A;
+$secondarydft: #99DBD6;
 
 @mixin rec($width, $height) {
 	width: $width;
@@ -72,9 +72,11 @@ $secondarydft:	#99DBD6;
 
 body {
 	@include flex-col();
+	@include padding-x(1rem);
 	width: 100%;
 	min-width: 500px;
-	> * {
+
+	>* {
 		width: 100%;
 		max-width: 1024px;
 	}
@@ -88,13 +90,13 @@ header {
 	@include margin-y(1rem);
 	background-color: $bgcol;
 	border-radius: 1rem;
-	max-width: calc(100% - 2rem);
 
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
 	.logo {
 		@include center();
 		justify-content: start;
+
 		div {
 			margin-left: 0.5rem;
 		}
@@ -111,14 +113,20 @@ header {
 
 .profile {
 	@include center();
+
 	img {
 		@include rec(40px, 40px);
 		background-color: $lgray;
 		border-radius: 50%;
 	}
+
 	div {
 		margin-left: 0.5rem;
 	}
+}
+
+main {
+	@include center();
 }
 
 .films {
@@ -143,26 +151,81 @@ header {
 .card-container {
 	margin: 0.5rem;
 	@include center();
+
 	.film-card {
 		width: 11rem;
+
 		.poster {
 			@include rec(11rem, 16rem);
 			border-radius: 1rem;
 			background-color: $lgray;
 			background-image: url("https://www.luxorfilm.ru/storage/b9eb6a018ae337fd4aa06f971c347863.jpeg");
-			background-size:cover;
+			background-size: cover;
 		}
+
 		.title {
 			@include text-shorten();
 		}
+
 		.genre {
 			@include text-shorten();
 			color: $second;
 		}
+
 		.inactive {
 			opacity: 0.3;
 		}
 	}
+}
+
+.registration {
+	form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 0.5rem;
+	}	
+	.field-container {
+		@include flex-col();
+		align-items: flex-start;
+		width: 100%;
+		label {
+			margin-left: 2rem;
+			font-size: 12px;
+		}
+		input {
+			width: 100%;
+			padding: 0.3rem;
+			border-radius: 0.5rem;
+			border: 1px solid $prime;
+		}
+	}
+
+	.hint {
+		@include center();
+		@include margin-y(0.5rem);
+	}
+
+	.btn {
+		@include margin-y(0.5rem);
+	}
+
+	.full-width {
+		grid-column: 1/-1;
+	}
+}
+
+.btn {
+	@include padding-x(2rem);
+	@include padding-y(0.8rem);
+	border-radius: 1rem;
+	border: 0px solid white;
+	color: white;
+	background-color: $primarydft;
+	transition: background-color 0.2s;
+}
+
+.btn-active {
+	background-color: $primary;
 }
 
 html::-webkit-scrollbar {

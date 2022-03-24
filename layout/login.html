@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./style.css">
+	<title>Cinema App</title>
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<img src="./static/logo.svg" alt="logo">
+			<div class="h5">Cinema App</div>
+		</div>
+		<nav>
+			<div class="body-sm">Home</div>
+			<div class="body-sm">Buy ticket</div>
+			<div class="body-sm">Films</div>
+		</nav>
+		<div class="info-container">
+			<div class="profile">
+				<img class="avatar" alt="" src="https://source.unsplash.com/40x40/?portrait?1">
+				<div class="">Marko Polo</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="registration">
+			<form action="action_page.php">
+					<h3 class="full-width">Sign In</h3>
+					<div class="full-width">Пожалуйста заполните форму что бы создать аккаунт</div>
+					<div class="field-container">
+						<label for="name">Имя</label>
+						<input type="text" placeholder="Boris" name="name" id="name" required>
+					</div>
+					<div class="field-container">
+						<label for="surname">Фамилия</label>
+						<input type="text" placeholder="Britva" name="surname" id="surname" required>
+					</div>
+					<div class="field-container full-width">
+						<label for="email">Почта</label>
+						<input type="email" placeholder="boris.britva@gmail.com" name="email" id="email" required>
+					</div>
+					<div class="field-container">
+						<label for="pswd">Пароль</label>
+						<input type="password" name="pswd" id="pswd" required>
+					</div>
+					<div class="field-container">
+						<label for="pswdrep">Повторите пароль</label>
+						<input type="password" name="pswdrep" id="pswdrep" required>
+					</div>
+					<button type="submit" class="button btn full-width">Зарегистрироваться</button>
+			</form>
+			<div class="hint">
+				Уже есть аккаунт?
+			</div>
+			<form action="action_page.php">
+				<h3 class="full-width">Sign Up</h3>
+				<div class="field-container full-width">
+					<label for="email">Логин</label>
+					<input type="email" placeholder="boris.britva@gmail.com" name="email" id="email" required>
+				</div>
+				<div class="field-container full-width">
+					<label for="pswd">Пароль</label>
+					<input type="password" name="pswd" id="pswd" required>
+				</div>
+				<button type="submit" class="button btn full-width">Войти</button>
+		</form>
+		</div>
+	</main>
+</body>
+
+</html>

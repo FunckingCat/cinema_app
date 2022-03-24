@@ -16,6 +16,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
   width: 100%;
   min-width: 500px;
 }
@@ -38,7 +40,6 @@ header {
   margin-bottom: 1rem;
   background-color: #F9F9FA;
   border-radius: 1rem;
-  max-width: calc(100% - 2rem);
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
@@ -125,6 +126,22 @@ header .info-container {
   margin-left: 0.5rem;
 }
 
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .films {
   display: -ms-grid;
   display: grid;
@@ -195,6 +212,90 @@ header .info-container {
 
 .card-container .film-card .inactive {
   opacity: 0.3;
+}
+
+.registration form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.5rem;
+}
+
+.registration .field-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.registration .field-container label {
+  margin-left: 2rem;
+  font-size: 12px;
+}
+
+.registration .field-container input {
+  width: 100%;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #25282B;
+}
+
+.registration .hint {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.registration .btn {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.registration .full-width {
+  grid-column: 1/-1;
+}
+
+.btn {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-radius: 1rem;
+  border: 0px solid white;
+  color: white;
+  background-color: #FFBDBF;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.btn-active {
+  background-color: #993639;
 }
 
 html::-webkit-scrollbar {
