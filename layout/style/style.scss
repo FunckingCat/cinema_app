@@ -1,7 +1,176 @@
-@import "mixin";
+/********************************
+ ****** MIXINES & HELPERS
+ *******************************/
+
+$error:		#FB4E4E;
+$warning:	#F6A609;
+$success:	#2AC769;
+$active:	#00857A;
+$default:	#00A699;
+$disabled:	#99DBD6;
+$dark:		#2B2B2B;
+$primary:	#25282B;
+$secondary:	#52575C;
+$inactive:	#A0A4A8;
+$devider:	#E8E8E8;
+$bgcol:		#F9F9FA;
+
+@mixin rec($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin padding-y($size) {
+	padding-top: $size;
+	padding-bottom: $size;
+}
+
+@mixin padding-x($size) {
+	padding-left: $size;
+	padding-right: $size;
+}
+
+@mixin margin-y($size) {
+	margin-top: $size;
+	margin-bottom: $size;
+}
+
+@mixin margin-x($size) {
+	margin-left: $size;
+	margin-right: $size;
+}
+
+@mixin text-shorten {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between; 
+	align-items: center;
+}
+
+@mixin flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.text-primary {
+	background-color: $primary;
+}
+
+.bg-primary {
+	background-color: $primary;
+}
+
+.border-primary {
+	border: 1px solid $primary;
+}
+
+.text-secondary {
+	background-color: $secondary;
+}
+
+.bg-secondary {
+	background-color: $secondary;
+}
+
+.border-secondary {
+	border: 1px solid $secondary;
+}
+
+.text-inactive {
+	background-color: $inactive;
+}
+
+.bg-inactive {
+	background-color: $inactive;
+}
+
+.border-inactive {
+	border: 1px solid $inactive;
+}
+
+.text-error {
+	background-color: $error;
+}
+
+.bg-error {
+	background-color: $error;
+}
+
+.border-error {
+	border: 1px solid $error;
+}
+
+.text-warning {
+	background-color: $warning;
+}
+
+.bg-warning {
+	background-color: $warning;
+}
+
+.border-warning {
+	border: 1px solid $warning;
+}
+
+.text-success {
+	background-color: $success;
+}
+
+.bg-success {
+	background-color: $success;
+}
+
+.border-success {
+	border: 1px solid $success;
+}
+
+.active {
+	background-color: $active;
+}
+
+.default {
+	background-color: $default;
+}
+
+.disabled {
+	background-color: $disabled;
+}
+
+/********************************
+ ****** BUTTON
+ *******************************/
+
+ .btn {
+	display: block;
+	@include padding-x(2rem);
+	@include padding-y(0.8rem);
+	border-radius: 1rem;
+	border: 0px solid white;
+	color: white;
+	transition: background-color 0.2s;
+}
+
+/********************************
+ ****** GENERAL
+ *******************************/
 
 * {
-	color: $prime;
+	color: $primary;
 }
 
 body {
@@ -15,6 +184,10 @@ body {
 		max-width: 1024px;
 	}
 }
+
+/********************************
+ ****** HEADER
+ *******************************/
 
 header {
 	display: grid;
@@ -50,7 +223,7 @@ header {
 
 	img {
 		@include rec(40px, 40px);
-		background-color: $lgray;
+		background-color: $inactive;
 		border-radius: 50%;
 	}
 
@@ -59,9 +232,17 @@ header {
 	}
 }
 
+/********************************
+ ****** MAIN
+ *******************************/
+
 main {
 	@include center();
 }
+
+/********************************
+ ****** FILMS
+ *******************************/
 
 .films {
 	display: grid;
@@ -92,7 +273,7 @@ main {
 		.poster {
 			@include rec(11rem, 16rem);
 			border-radius: 1rem;
-			background-color: $lgray;
+			background-color: $inactive;
 			background-image: url("https://www.luxorfilm.ru/storage/b9eb6a018ae337fd4aa06f971c347863.jpeg");
 			background-size: cover;
 		}
@@ -103,7 +284,7 @@ main {
 
 		.genre {
 			@include text-shorten();
-			color: $second;
+			color: $secondary;
 		}
 
 		.inactive {
@@ -111,6 +292,10 @@ main {
 		}
 	}
 }
+
+/********************************
+ ****** AUTH
+ *******************************/
 
 .registration {
 	form {
@@ -131,7 +316,7 @@ main {
 			padding: 0.3rem;
 			padding-left: 1rem;
 			border-radius: 0.5rem;
-			border: 1px solid $prime;
+			border: 1px solid $primary;
 		}
 	}
 
@@ -151,16 +336,6 @@ main {
 	}
 }
 
-.btn {
-	@include padding-x(2rem);
-	@include padding-y(0.8rem);
-	border-radius: 1rem;
-	border: 0px solid white;
-	color: white;
-	background-color: $primarydft;
-	transition: background-color 0.2s;
-}
-
-.btn-active {
-	background-color: $primary;
-}
+/********************************
+ ****** FILM PAGE
+ *******************************/

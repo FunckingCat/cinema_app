@@ -1,3 +1,109 @@
+/********************************
+ ****** MIXINES & HELPERS
+ *******************************/
+.text-primary {
+  background-color: #25282B;
+}
+
+.bg-primary {
+  background-color: #25282B;
+}
+
+.border-primary {
+  border: 1px solid #25282B;
+}
+
+.text-secondary {
+  background-color: #52575C;
+}
+
+.bg-secondary {
+  background-color: #52575C;
+}
+
+.border-secondary {
+  border: 1px solid #52575C;
+}
+
+.text-inactive {
+  background-color: #A0A4A8;
+}
+
+.bg-inactive {
+  background-color: #A0A4A8;
+}
+
+.border-inactive {
+  border: 1px solid #A0A4A8;
+}
+
+.text-error {
+  background-color: #FB4E4E;
+}
+
+.bg-error {
+  background-color: #FB4E4E;
+}
+
+.border-error {
+  border: 1px solid #FB4E4E;
+}
+
+.text-warning {
+  background-color: #F6A609;
+}
+
+.bg-warning {
+  background-color: #F6A609;
+}
+
+.border-warning {
+  border: 1px solid #F6A609;
+}
+
+.text-success {
+  background-color: #2AC769;
+}
+
+.bg-success {
+  background-color: #2AC769;
+}
+
+.border-success {
+  border: 1px solid #2AC769;
+}
+
+.active {
+  background-color: #00857A;
+}
+
+.default {
+  background-color: #00A699;
+}
+
+.disabled {
+  background-color: #99DBD6;
+}
+
+/********************************
+ ****** BUTTON
+ *******************************/
+.btn {
+  display: block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-radius: 1rem;
+  border: 0px solid white;
+  color: white;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+/********************************
+ ****** GENERAL
+ *******************************/
 * {
   color: #25282B;
 }
@@ -27,6 +133,9 @@ body > * {
   max-width: 1024px;
 }
 
+/********************************
+ ****** HEADER
+ *******************************/
 header {
   display: -ms-grid;
   display: grid;
@@ -118,7 +227,7 @@ header .info-container {
 .profile img {
   width: 40px;
   height: 40px;
-  background-color: #8B8B8B;
+  background-color: #A0A4A8;
   border-radius: 50%;
 }
 
@@ -126,6 +235,9 @@ header .info-container {
   margin-left: 0.5rem;
 }
 
+/********************************
+ ****** MAIN
+ *******************************/
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,6 +254,9 @@ main {
           align-items: center;
 }
 
+/********************************
+ ****** FILMS
+ *******************************/
 .films {
   display: -ms-grid;
   display: grid;
@@ -192,7 +307,7 @@ main {
   width: 11rem;
   height: 16rem;
   border-radius: 1rem;
-  background-color: #8B8B8B;
+  background-color: #A0A4A8;
   background-image: url("https://www.luxorfilm.ru/storage/b9eb6a018ae337fd4aa06f971c347863.jpeg");
   background-size: cover;
 }
@@ -214,6 +329,9 @@ main {
   opacity: 0.3;
 }
 
+/********************************
+ ****** AUTH
+ *******************************/
 .registration form {
   display: -ms-grid;
   display: grid;
@@ -284,20 +402,7 @@ main {
   grid-column: 1/-1;
 }
 
-.btn {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-  border-radius: 1rem;
-  border: 0px solid white;
-  color: white;
-  background-color: #FFBDBF;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s;
-}
-
-.btn-active {
-  background-color: #993639;
-}
+/********************************
+ ****** FILM PAGE
+ *******************************/
 /*# sourceMappingURL=style.css.map */
