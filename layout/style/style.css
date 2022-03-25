@@ -73,16 +73,40 @@
   border: 1px solid #2AC769;
 }
 
-.active {
+.text-active {
   background-color: #00857A;
 }
 
-.default {
+.bg-active {
+  background-color: #00857A;
+}
+
+.border-active {
+  border: 1px solid #00857A;
+}
+
+.text-default {
   background-color: #00A699;
 }
 
-.disabled {
+.bg-default {
+  background-color: #00A699;
+}
+
+.border-default {
+  border: 1px solid #00A699;
+}
+
+.text-disabled {
   background-color: #99DBD6;
+}
+
+.bg-disabled {
+  background-color: #99DBD6;
+}
+
+.border-disabled {
+  border: 1px solid #99DBD6;
 }
 
 /********************************
@@ -330,9 +354,9 @@ main {
 }
 
 /********************************
- ****** AUTH
+ ****** FORMS
  *******************************/
-.registration form {
+form {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -340,7 +364,7 @@ main {
   grid-column-gap: 0.5rem;
 }
 
-.registration .field-container {
+form .field-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,12 +384,12 @@ main {
   width: 100%;
 }
 
-.registration .field-container label {
+form .field-container label {
   margin-left: 2rem;
   font-size: 12px;
 }
 
-.registration .field-container input {
+form .field-container input {
   width: 100%;
   padding: 0.3rem;
   padding-left: 1rem;
@@ -373,8 +397,17 @@ main {
   border: 1px solid #25282B;
 }
 
-.registration .hint {
-  background-color: #fff;
+form .btn {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+form .full-width {
+  grid-column: 1/-1;
+}
+
+.form-hint {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,16 +423,6 @@ main {
           align-items: center;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.registration .btn {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 1.5rem;
-}
-
-.registration .full-width {
-  grid-column: 1/-1;
 }
 
 /********************************
