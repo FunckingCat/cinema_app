@@ -109,20 +109,63 @@
   border: 1px solid #99DBD6;
 }
 
+.radius-sm {
+  border-radius: 0.5rem;
+}
+
+.radius-md {
+  border-radius: 1rem;
+}
+
+.radius-lg {
+  border-radius: 1.5rem;
+}
+
 /********************************
  ****** BUTTON
  *******************************/
-.btn {
+.button {
   display: block;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
-  border-radius: 1rem;
-  border: 0px solid white;
   color: white;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
+  border: 0px solid white;
+  border-radius: 1rem;
+}
+
+.extended {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F9F9FA;
+  -webkit-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+          box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.extended .main {
+  color: #25282B;
+}
+
+.extended .hint {
+  color: #A0A4A8;
 }
 
 /********************************
@@ -397,7 +440,7 @@ form .field-container input {
   border: 1px solid #25282B;
 }
 
-form .btn {
+form .button {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
@@ -428,7 +471,7 @@ form .full-width {
 /********************************
  ****** FILM PAGE
  *******************************/
-.film-page {
+.film-info {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 280px;
@@ -437,7 +480,7 @@ form .full-width {
   grid-gap: 1rem;
 }
 
-.film-page .poster {
+.film-info .poster {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
@@ -450,7 +493,12 @@ form .full-width {
   background-image: url("https://www.luxorfilm.ru/storage/b9eb6a018ae337fd4aa06f971c347863.jpeg");
 }
 
-.film-page .spec .spec-item {
+.film-info .spec, .film-info .title, .film-info .descr {
+  margin-left: 1rem;
+  display: block;
+}
+
+.film-info .spec .spec-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,23 +519,88 @@ form .full-width {
   margin-bottom: 0.5rem;
 }
 
-.film-page .spec .spec-item .name {
+.film-info .spec .spec-item .name {
   font-weight: 600;
   -ms-flex-item-align: start;
       align-self: flex-start;
   width: 40%;
 }
 
-.film-page .spec .spec-item .value {
+.film-info .spec .spec-item .value {
   width: 60%;
 }
 
 @media (max-width: 700px) {
-  .film-page {
+  .film-info {
         grid-template-areas: "title poster" "spec  poster" "descr descr";
   }
   .descr {
     grid-column: 1 / -1;
   }
+}
+
+.timetable {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.timetable .days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.timetable .days > div {
+  width: 20%;
+  min-width: 135px;
+  margin-left: 1rem;
+}
+
+.timetable .cinema {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #25282B;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+.timetable .cinema .sessions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.timetable .cinema .sessions > * {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 /*# sourceMappingURL=style.css.map */

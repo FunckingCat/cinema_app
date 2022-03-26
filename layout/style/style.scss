@@ -175,18 +175,49 @@ $bgcol:		#F9F9FA;
 	border: 1px solid $disabled;
 }
 
+.radius-sm {
+	border-radius: 0.5rem;
+}
+
+.radius-md {
+	border-radius: 1rem;
+}
+
+.radius-lg {
+	border-radius: 1.5rem;
+}
+
 /********************************
  ****** BUTTON
  *******************************/
 
- .btn {
+.button {
 	display: block;
 	@include padding-x(2rem);
 	@include padding-y(0.8rem);
-	border-radius: 1rem;
-	border: 0px solid white;
+
 	color: white;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 0.2px;
 	transition: background-color 0.2s;
+	border: 0px solid white;
+	border-radius: 1rem;
+}
+
+.extended {
+	@include flex-col();
+	background-color: $bgcol;
+	// border: 1px solid $inactive;
+	box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+	.main {
+		color: $primary;
+	}
+
+	.hint {
+		color: $inactive;
+	}
 }
 
 /********************************
@@ -343,7 +374,7 @@ form {
 		}
 	}
 	
-	.btn {
+	.button {
 		@include margin-y(0.5rem);
 		margin-top: 1.5rem;
 	}
@@ -362,7 +393,7 @@ form {
  ****** FILM PAGE
  *******************************/
 
-.film-page {
+.film-info {
 	display: grid;
 	grid-template-columns: 1fr 280px;
 	grid-template-areas:	"title poster"
@@ -376,6 +407,10 @@ form {
 		border-radius: 1.5rem;
 		background-size: cover;
 		background-image: url("https://www.luxorfilm.ru/storage/b9eb6a018ae337fd4aa06f971c347863.jpeg");
+	}
+	.spec, .title, .descr {
+		margin-left: 1rem;
+		display: block;
 	}
 	.spec {
 		.spec-item {
@@ -395,7 +430,7 @@ form {
 }
 
 @media (max-width: 700px) {
-	.film-page {
+	.film-info {
 		grid-template-areas:	"title poster"
 								"spec  poster"
 								"descr descr";
@@ -406,5 +441,39 @@ form {
 }
 
 .timetable {
+	margin-top: 1rem;
+	width: 100%;
 	
+	.days {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+
+		& > div {
+			width: 20%;
+			min-width: 135px;
+			margin-left: 1rem;
+		}
+	}
+
+	.cinema {
+		@include margin-y(1rem);
+		@include padding-y(1rem);
+		border-top: 1px solid $primary;
+
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+
+		.sessions {
+			@include flex-row();
+			flex-wrap: wrap;
+			align-items: flex-start;
+			justify-content: flex-start;
+
+			& > * {
+				@include margin-x(0.5rem);
+				margin-bottom: 0.8rem;
+			}
+		}
+	}
 }
