@@ -319,6 +319,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 /********************************
@@ -493,7 +495,9 @@ form .full-width {
   background-image: url("https://www.luxorfilm.ru/storage/b9eb6a018ae337fd4aa06f971c347863.jpeg");
 }
 
-.film-info .spec, .film-info .title, .film-info .descr {
+.film-info .spec,
+.film-info .title,
+.film-info .descr {
   margin-left: 1rem;
   display: block;
 }
@@ -640,7 +644,16 @@ form .full-width {
   margin-top: 1.5rem;
 }
 
-.seat-pick .row {
+.seat-pick .seat {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.4rem;
+  border-radius: 0.2rem;
+}
+
+.seat-pick .row,
+.seat-pick .types,
+.seat-pick .type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -656,11 +669,146 @@ form .full-width {
           align-items: center;
 }
 
-.seat-pick .row .seat {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: 0.4rem;
-  border-radius: 0.2rem;
-  background-color: #52575C;
+.seat-pick .types {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.picked {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.picked h4 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.picked .picked-seat {
+  width: 100%;
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-top: 1px solid #52575C;
+}
+
+.picked .cross {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.picked .button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+/********************************
+ ****** CABINET
+ *******************************/
+.cabinet {
+  width: 100%;
+}
+
+.cabinet .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.cabinet .user-info > * {
+  margin-right: 1rem;
+}
+
+.cabinet .orders {
+  margin-top: 1rem;
+}
+
+.cabinet .active-history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.cabinet .active-history > * {
+  margin-right: 1rem;
+}
+
+.cabinet .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #52575C;
+  padding: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
