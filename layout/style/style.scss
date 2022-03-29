@@ -188,6 +188,40 @@ $bgcol: #F9F9FA;
 }
 
 /********************************
+ ****** ANIMATION & Hover
+ *******************************/
+
+.underline {
+	position: relative;
+}
+
+.underline:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	background: $primary;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+
+.underline:hover:after {
+	width: 100%;
+	left: 0;
+}
+
+/********************************
+ ****** UTILITY CLASSES
+ *******************************/
+
+ .price::after {
+	content: "₽";
+ }
+
+/********************************
  ****** BUTTON
  *******************************/
 
@@ -581,10 +615,12 @@ form {
 		@include flex-row();
 		justify-content: flex-start;
 		margin-bottom: 1.5rem;
+
 		&>* {
 			margin-right: 1rem;
 		}
 	}
+
 	.list-item {
 		@include flex-row();
 		border-top: 1px solid $secondary;

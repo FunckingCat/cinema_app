@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /********************************
  ****** MIXINES & HELPERS
  *******************************/
@@ -119,6 +120,39 @@
 
 .radius-lg {
   border-radius: 1.5rem;
+}
+
+/********************************
+ ****** ANIMATION & Hover
+ *******************************/
+.underline {
+  position: relative;
+}
+
+.underline:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #25282B;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.underline:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/********************************
+ ****** UTILITY CLASSES
+ *******************************/
+.price::after {
+  content: "₽";
 }
 
 /********************************
