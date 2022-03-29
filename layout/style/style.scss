@@ -230,14 +230,14 @@ $bgcol: #F9F9FA;
 	@include padding-x(2rem);
 	@include padding-y(0.8rem);
 
+	border: none;
 	color: white;
 	font-weight: 600;
 	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 0.2px;
-	transition: background-color 0.2s;
-	border: 0px solid white;
 	border-radius: 1rem;
+	transition: background-color 0.2s;
 }
 
 .extended {
